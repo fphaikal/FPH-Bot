@@ -1,5 +1,6 @@
 # FPH-Bot
 This project is made for me to learn javascript
+Bot made for whatsapp
 
 ## Installation
 
@@ -11,6 +12,7 @@ $ npm i
 ```
 
 ## Feature
+The following are the features in FPH-Bot
 
 ```
 - Live Member JKT48

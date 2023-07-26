@@ -1,7 +1,7 @@
 # FPH-Bot
 This project is made for me to learn javascript
 
-### Installation
+## Installation
 
 A step by step guide that will tell you how to get the development environment up and running.
 

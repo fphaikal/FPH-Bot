@@ -13,8 +13,8 @@ $ npm i
 ## Feature
 
 ```
-$ Live Member JKT48
-$ Downloader Instagram & TikTok
-$ Making Sticker
-$ Search For Movies On IMDb
+- Live Member JKT48
+- Downloader Instagram & TikTok
+- Making Sticker
+- Search For Movies On IMDb
 ```

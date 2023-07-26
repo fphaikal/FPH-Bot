@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "@phaticusthiccy/open-apis": "^1.8.5",
+    "@tobyg74/tiktok-api-dl": "^1.0.4",
+    "axios": "^1.4.0",
+    "chatgpt": "^5.2.5",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.3.1",
+    "got": "^13.0.0",
+    "image-size": "^1.0.2",
+    "image-to-base64": "^2.2.0",
+    "jimp": "^0.22.8",
+    "kyouka-api": "^1.3.5",
+    "lyric-api": "^1.0.1",
+    "movier": "^3.0.2",
+    "open-graph-scraper": "^6.2.1",
+    "openai": "^3.3.0",
+    "qrcode-terminal": "^0.12.0",
+    "snapsave-downloader": "^6.9.5",
+    "social-downloader-cherry": "^1.0.0",
+    "uuid": "^9.0.0",
+    "whatsapp-web.js": "^1.21.0"
+  }
+}

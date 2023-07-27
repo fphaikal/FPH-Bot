@@ -7,7 +7,7 @@ Bot made for whatsapp
 A step by step guide that will tell you how to get the development environment up and running.
 
 ```
-$ git clone https://github.com/crstlnz/jkt48sr-discord-notif.git
+$ git clone https://github.com/fphaikal/FPH-Bot.git
 $ npm i
 ```
 

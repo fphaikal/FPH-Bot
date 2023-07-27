@@ -3,6 +3,7 @@
     "start": "nodemon index.js"
   },
   "dependencies": {
+    "@flytri/lyrics-finder": "^1.0.6",
     "@phaticusthiccy/open-apis": "^1.8.5",
     "@tobyg74/tiktok-api-dl": "^1.0.4",
     "axios": "^1.4.0",
@@ -14,7 +15,6 @@
     "image-to-base64": "^2.2.0",
     "jimp": "^0.22.8",
     "kyouka-api": "^1.3.5",
-    "lyric-api": "^1.0.1",
     "movier": "^3.0.2",
     "open-graph-scraper": "^6.2.1",
     "openai": "^3.3.0",

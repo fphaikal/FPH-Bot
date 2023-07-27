@@ -35,7 +35,7 @@ const getLive = async (message) => {
         };
                 
 
-        messageText += `${username}Sedang LIVE SHOWROOM\nStarted At: ${getTimeString(start)}\nTayangan: ${viewCount}\n\nTonton: https://www.showroom-live.com/r/${roomKey}\n========================\n\n`;
+        messageText += `${username}Sedang LIVE SHOWROOM\nStarted At: ${getTimeString(start)}\nTayangan: ${viewCount}\n\nTonton: https://www.showroom-live.com/r/${roomKey}\n\n========================\n\n`;
       });
       message.reply(messageText);
     } else {

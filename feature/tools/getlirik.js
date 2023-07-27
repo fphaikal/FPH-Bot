@@ -1,14 +1,20 @@
-const ka = require('kyouka-api');
-const lyrics = require('lyric-api');
+const { Google, Musixmatch } = require("@flytri/lyrics-finder");
 
 const getLirik = async(body, message) => {
-    const judul = body.split(' ')[1];
+    const judul = body.slice(7);
 
     try {
-        console.log(await lyrics.fetch(judul, 1))
-    } catch (error) {
-        console.log('[lyric-api]:', error.message, error.stack)
-    }
+        const get = await Google(judul);
+
+        if(get) {
+            let reply = `*Hasil pencarian untuk "${get.title}*":\n\n`;
+                reply += `${get.lyrics}`;
+
+            message.reply(reply);
+        }
+      } catch (error) {
+        console.error("Error:", error.message);
+      }
 }
 
 module.exports = {

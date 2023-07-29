@@ -17,6 +17,7 @@ const { ChatAIHandler } = require("./feature/tools/chatGPT");
 const { getImdb } = require("./feature/tools/getImdb");
 const { getQuotesAnim } = require("./feature/tools/quotesAnim");
 const { getLirik } = require("./feature/tools/getlirik");
+const { getSetlist } = require("./feature/jkt48/getSetlist");
 const author = "Fahreza Pasha Haikal";
 const client = new Client({
   authStrategy: new LocalAuth(),
@@ -107,6 +108,9 @@ Search Feature:
   if (body.startsWith("?recent ")) {
     await getRecentLiveMember(body, message);
   }
+  if (body.startsWith("/setlist ")) {
+    await getSetlist(body, message);
+  }
 
   // Downloader
   if (body.startsWith('/tt ')) {
@@ -127,9 +131,9 @@ Search Feature:
       stickerName: `${name}`
     });
   }
-  if (body.startsWith('/')) {
-    await ChatAIHandler(body, message);
-  }
+  //if (body.startsWith('/')) {
+  //  await ChatAIHandler(body, message);
+  // }
   if(body.startsWith('/imdb ')) {
     await getImdb(body, message);
   }

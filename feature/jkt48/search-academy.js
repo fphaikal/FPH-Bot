@@ -22,7 +22,7 @@ const getSearchMemberAcademy = async(body, message) => {
       }
 
       if (searchResults.length > 0) {
-        let reply = `Hasil pencarian untuk "${query}":\n`;
+        let reply = `Hasil pencarian untuk "${query}":\n\n`;
 
         searchResults.forEach((result) => {
           reply += `${result.description}\n`;

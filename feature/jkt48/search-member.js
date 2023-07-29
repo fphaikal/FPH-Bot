@@ -8,8 +8,10 @@ const getSearchMember = async(body, message) => {
       const data = response.data;
       const liveStatus = data.is_live ? "Lagi LIVE Nih..." : "Sedang Tidak LIVE";
 
+      const searchResults = [];
+      const filteredResults = data.filter(item => item.name.toLowerCase().includes(query.toLowerCase()));
 
-      const searchResults = data.filter(item => item.name.toLowerCase().includes(query.toLowerCase()));
+      searchResults.push(...filteredResults);
 
       if (searchResults.length > 0) {
         let reply = `Hasil pencarian untuk "${query}":\n\n`;

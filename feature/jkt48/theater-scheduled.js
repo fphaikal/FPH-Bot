@@ -7,33 +7,56 @@ const getScheduled = async (message) => {
     );
     const acaraList = response.data;
 
-  if (acaraList) {
+    if (acaraList) {
       let messageText = "=== Jadwal Theater JKT48 ===\n";
 
       const acaraList = response.data;
       const today = new Date();
+      const todayDate = today.getDate();
+      const todayMonth = today.getMonth();
+      const todayYear = today.getFullYear();
 
-      // Filter acara yang setelah tanggal hari ini
+      // Filter acara yang setelah atau sama dengan tanggal hari ini
       const upcomingAcaraList = acaraList.filter((acara) => {
         const showDate = new Date(acara.showDate);
-        return showDate >= today;
+        const acaraDate = showDate.getDate();
+        const acaraMonth = showDate.getMonth();
+        const acaraYear = showDate.getFullYear();
+
+        // Bandingkan tanggal, bulan, dan tahun
+        if (acaraYear > todayYear) {
+          return true;
+        } else if (acaraYear === todayYear && acaraMonth > todayMonth) {
+          return true;
+        } else if (
+          acaraYear === todayYear &&
+          acaraMonth === todayMonth &&
+          acaraDate >= todayDate
+        ) {
+          return true;
+        }
+
+        return false;
       });
-    
 
       upcomingAcaraList.forEach((acara) => {
-
-        const formattedShowDate = new Date(acara.showDate).toLocaleDateString("id-ID", {
-          weekday: "long",
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        });
+        const formattedShowDate = new Date(acara.showDate).toLocaleDateString(
+          "id-ID",
+          {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          }
+        );
 
         const setlistName = acara.setlist.name;
         const showDate = formattedShowDate;
         const showTime = acara.showTime;
         const link = acara.ticketShowroom;
-        const stageNames = acara.memberList.map(member => member.stage_name).join(', ');
+        const stageNames = acara.memberList
+          .map((member) => member.stage_name)
+          .join(", ");
 
         messageText += `  
 *Nama Setlist:* ${setlistName}
@@ -41,7 +64,7 @@ const getScheduled = async (message) => {
 *Waktu Pertunjukan:* ${showTime}
 *Entrance URL:* ${link}
 *Lineup Member:* \n${stageNames}\n
-========================\n`;
+====================\n`;
       });
       message.reply(messageText);
     } else {

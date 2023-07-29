@@ -11,9 +11,12 @@ const getLirik = async(body, message) => {
                 reply += `${get.lyrics}`;
 
             message.reply(reply);
-        }
+        } 
+
+        console.log(get);
       } catch (error) {
         console.error("Error:", error.message);
+        message.reply("Tidak Ada Hasil yang Ditemukan");
       }
 }
 

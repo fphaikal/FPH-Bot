@@ -13,7 +13,7 @@ const { getSearchMemberAcademy } = require("./feature/jkt48/search-academy");
 const { getRecentLive } = require("./feature/jkt48/recentLive");
 const { getRecentLiveMember } = require("./feature/jkt48/recentLiveMember");
 const { toSticker } = require("./feature/tools/toSticker");
-const { chatGPT } = require("./feature/tools/chatGPT");
+const { ChatAIHandler } = require("./feature/tools/chatGPT");
 const { getImdb } = require("./feature/tools/getImdb");
 const { getQuotesAnim } = require("./feature/tools/quotesAnim");
 const { getLirik } = require("./feature/tools/getlirik");
@@ -127,8 +127,8 @@ Search Feature:
       stickerName: `${name}`
     });
   }
-  if (body.startsWith('/ask ')) {
-    await chatGPT(body, message);
+  if (body.startsWith('/')) {
+    await ChatAIHandler(body, message);
   }
   if(body.startsWith('/imdb ')) {
     await getImdb(body, message);

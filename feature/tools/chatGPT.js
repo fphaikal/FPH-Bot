@@ -1,36 +1,26 @@
-require('dotenv').config(); // Memuat variabel lingkungan dari file .env
-
-const { Configuration, OpenAIApi } = require("openai");
 const axios = require("axios");
-
+require("dotenv").config();
+const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
-const openai = new OpenAIApi(configuration);
 
-const chatGPT = async (body, message) => {
-  let text = body.slice(5);
+const ChatAIHandler = async (body, message) => {
+  const cmd = body.split("/");
 
-  try {
-    var qst = `Q: ${text}\nA:`;
-    const response = await openai.createCompletion({
-      model: "text-davinci-003",
-      prompt: qst,
-      temperature: 0,
-      max_tokens: 300,
-      top_p: 1.0,
-      frequency_penalty: 0.0,
-      presence_penalty: 0.0,
-    });
-    message.reply(response.data.choices[0].text);
-  } catch (error) {
-    console.error("Error downloading Instagram media:", error.message);
-    message.reply(
-      "Maaf, terjadi kesalahan saat mengambil data ChatGPT"
-    );
-  }
+  message.reply("sedang diproses, tunggu bentar ya.");
+
+  const openai = new OpenAIApi(configuration);
+  const response = await openai.createCompletion({
+    model: "text-davinci-003",
+    prompt: body,
+    max_tokens: 7,
+    temperature: 0,
+  });
+
+  message.reply(response)
 };
 
 module.exports = {
-  chatGPT,
+  ChatAIHandler,
 };

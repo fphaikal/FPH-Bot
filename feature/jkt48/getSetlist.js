@@ -3,7 +3,7 @@ const {MessageMedia} = require("whatsapp-web.js")
 const getSetlist = async (body, message) => {
   const query = body.slice(9);
   try {
-    const dataSetlist = require("../../database/setlist-theater");
+    const dataSetlist = require("../../data/setlist-theater");
 
     const searchResults = [];
 

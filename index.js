@@ -15,7 +15,7 @@ const { getRecentLiveMember } = require("./feature/jkt48/recentLiveMember");
 const { toSticker } = require("./feature/tools/toSticker");
 const { ChatAIHandler } = require("./feature/tools/chatGPT");
 const { getImdb } = require("./feature/tools/getImdb");
-const { getQuotesAnim } = require("./feature/tools/quotesAnim");
+const { getQuotesAnim, getQuotes } = require("./feature/tools/getQuotes");
 const { getLirik } = require("./feature/tools/getlirik");
 const { getSetlist } = require("./feature/jkt48/getSetlist");
 const author = "Fahreza Pasha Haikal";
@@ -51,7 +51,6 @@ client.on("message", async (message) => {
 Author  : ${author}
 Contact : wa.me/6285765909380
 ------------------------------
-Selamat datang di FPH Bot!
 
 1. Seputar JKT48
 2. Downloader
@@ -69,7 +68,8 @@ Selamat datang di FPH Bot!
 Search Feature:
 *? (nama)* (Cari Member)
 *?trainee (nama)* (Cari Member Trainee, dan Academy)
-*?recent (nama)* (Cari Member Kapan Terakhir Kali LIVE)`
+*?recent (nama)* (Cari Member Kapan Terakhir Kali LIVE)
+*?setlist (nama)* (Cari Detail Setlist)`
     );
   } else if (body === "2") {
     message.reply(
@@ -80,7 +80,9 @@ Search Feature:
     message.reply(
       `Silahkan Pilih:
 *!sticker* (Mengubah Foto Menjadi Stiker)
-*!sticker (nama)* (Mengubah Foto Menjadi Stiker dan Memberikan Nama Stiker)`)
+*!sticker (nama)* (Mengubah Foto Menjadi Stiker dan Memberikan Nama Stiker)
+*/imdb (judul film) (Mencari Data Film di IMDb)
+*/lirik (judul lagu) (Mencari Lirik Lagu dari Google)`)
   }
 
   // JKT48
@@ -108,7 +110,7 @@ Search Feature:
   if (body.startsWith("?recent ")) {
     await getRecentLiveMember(body, message);
   }
-  if (body.startsWith("/setlist ")) {
+  if (body.startsWith("?setlist ")) {
     await getSetlist(body, message);
   }
 
@@ -130,6 +132,14 @@ Search Feature:
       stickerAuthor: 'FPHaikal',
       stickerName: `${name}`
     });
+  }  else if (body.startsWith('!sticker') && message.type === 'image') {
+    const media = await message.downloadMedia();
+
+    client.sendMessage(message.from, media, {
+      sendMediaAsSticker: true,
+      stickerAuthor: 'FPHaikal',
+      stickerName: `FPHaikal`
+    });
   }
   //if (body.startsWith('/')) {
   //  await ChatAIHandler(body, message);
@@ -138,7 +148,7 @@ Search Feature:
     await getImdb(body, message);
   }
   if(body === "/quotes") {
-    await getQuotesAnim(message);
+    await getQuotes(message);
   }
   if(body.startsWith('/lirik ')) {
     await getLirik(body,message);

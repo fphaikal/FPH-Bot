@@ -81,7 +81,72 @@ const dataSetlist = [
     image:
       "https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit19201280gsm/events/2021/04/05/c7976999-b028-405f-948b-9777afc8a629-1617593375345-ca8626d0ba97c53fe6777313e9bab23f.jpg",
 
-    songs: [],
+    songs: [
+      {
+        title: "Nagai Hikari",
+        translatedTitle: "Cahaya Panjang"
+      },
+      {
+        title: "Squall No Aida Ni",
+        translatedTitle: "Di Tengah Hujan Badai Tiba-Tiba"
+      },
+      {
+        title: "JK Nemurihime",
+        translatedTitle: "Gadis SMA Putri Tidur"
+      },
+      {
+        title: "Kimi Ni Au Tabi Koi Wo Suru",
+        translatedTitle: "Jatuh Cinta Setiap Bertemu Denganmu"
+      },
+      {
+        title: "Kuroi Tenshi",
+        translatedTitle: "Malaikat Hitam"
+      },
+      {
+        title: "Heart Gata Virus",
+        translatedTitle: "Virus Tipe Hati"
+      },
+      {
+        title: "Renai Kinshi Jourei",
+        translatedTitle: "Aturan Anti Cinta"
+      },
+      {
+        title: "Tsundere!",
+        translatedTitle: "Tsundere!"
+      },
+      {
+        title: "Manatsu No Christmas Rose",
+        translatedTitle: "Mawar Natal Musim Panas"
+      },
+      {
+        title: "Switch",
+        translatedTitle: "Switch"
+      },
+      {
+        title: "109",
+        translatedTitle: "Marukyuu"
+      },
+      {
+        title: "Hikoukigumo",
+        translatedTitle: "Jejak Awan Pesawat"
+      },
+      {
+        title: "Ano Koro no Sneakers",
+        translatedTitle: "Sneakers Waktu Itu"
+      },
+      {
+        title: "JKT Sanjou!",
+        translatedTitle: "JKT Datang!"
+      },
+      {
+        title: "Namida No Shinkokyuu",
+        translatedTitle: "Napas dalam Air Mata"
+      },
+      {
+        title: "Oogoe Diamond",
+        translatedTitle: "Teriakan Berlian"
+      },
+    ],
   },
   {
     name: "Ingin Bertemu",
@@ -89,8 +154,61 @@ const dataSetlist = [
     description:
       "Manis dan pahitnya sebuah pertemuan akan dapat kalian rasakan melalui pertunjukan “Ingin Bertemu” yang dipersembahkan oleh JKT48 Trainee Generasi 11..",
     image:
-      "https://pbs.twimg.com/media/FvYFXbjaAAITstl?format=jpg&name=4096x4096",
-    songs: [],
+      "https://i.ibb.co/YtnL24f/14-Aitakatta-2023.png",
+    songs: [
+      {
+        title: "Nageki no Figure",
+        translatedTitle: "Boneka yang Sedih"
+      },
+      {
+        title: "Namida no Shounan",
+        translatedTitle: "Air Mata Shounan"
+      },
+      {
+        title: "Aitakatta",
+        translatedTitle: "Ingin Bertemu"
+      },
+      {
+        title: "Nagisa no CHERRY",
+        translatedTitle: "Cherry Tepi Pantai"
+      },
+      {
+        title: "Glass no I LOVE YOU",
+        translatedTitle: "Kaca Berbentuk I Love You"
+      },
+      {
+        title: "Koi no Plan",
+        translatedTitle: "Rencana Cinta"
+      },
+      {
+        title: "Senaka Kara Dakishimete",
+        translatedTitle: "Peluklah Aku dari Belakang"
+      },
+      {
+        title: "Rio no Kakumei",
+        translatedTitle: "Revolusi Rio"
+      },
+      {
+        title: "Dakedo...",
+        translatedTitle: "Tetapi..."
+      },
+      {
+        title: "Dear My Teacher",
+        translatedTitle: "Dear My Teacher"
+      },
+      {
+        title: "Mirai no Tobira",
+        translatedTitle: "Pintu Masa Depan"
+      },
+      {
+        title: "JKT48",
+        translatedTitle: "JKT48"
+      },
+      {
+        title: "Skirt, Hirari",
+        translatedTitle: "Rok Bergoyang"
+      },
+    ],
   },
   {
     name: "Tunas Dibalik Seragam",

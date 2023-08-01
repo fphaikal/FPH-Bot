@@ -5,7 +5,7 @@ const getQuotes = async(message) => {
     const randomData = getRandomQuote();
 
     if(randomData) {
-      const quoteMessage = `${randomData.quotes}\n - ${randomData.name}`
+      const quoteMessage = `${randomData.quotes}\n\n - ${randomData.name}`
       message.reply(quoteMessage);
     }
   } catch (error) {

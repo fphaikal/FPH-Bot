@@ -1,6 +1,7 @@
 const axios = require('axios');
 const {formatLongDate} = require('../../utils/formatLongDate');
 const { MessageMedia } = require("whatsapp-web.js");
+const { getLiveDuration } = require('../../utils/geLiveDuration');
 
 const getRecentLiveMember = async(body, message) => {
     const query = body.slice(8);
@@ -21,17 +22,7 @@ const getRecentLiveMember = async(body, message) => {
             const liveStart = item.live_info.date.start;
             const liveEnd = item.live_info.date.end;
 
-            const getLiveDuration = (duration) => {
-                const minutes = Math.floor(duration / 60000);
-                const hours = Math.floor(minutes / 60);
-                const remainingMinutes = minutes % 60;
             
-                if (hours === 0) {
-                  return `${remainingMinutes} Menit`;
-                } else {
-                  return `${hours} Jam ${remainingMinutes} Menit`;
-                }
-              };
             messageText += `*${username}Telah Selesai Showroom*\n\n*Mulai:* ${formatLongDate(liveStart)}\n*Selesai:* ${formatLongDate(liveEnd)}\n\n*Penonton:* ${viewCount}\n*Durasi:* ${getLiveDuration(duration)}\n*Gift:* ${gift}G\n========================\n`;
           });
 

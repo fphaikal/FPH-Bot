@@ -95,6 +95,74 @@ const getQuotesData = [
         name: "Reva Fidelia",
         quotes: "Sesuatu yang dimulai dengan baik bukan berarti berakhir dengan yang baik juga."
     },
+    {
+        name: "Fiony Alveria Tantri",
+        quotes: "Justru karena dunia ini kejam, kita jadi bisa sadar dan menikmati bahwa hal-hal kecil yang membuat bahagia adalah hal-hal yang berharga"
+    },
+    {
+        name: "Reva Fidelia",
+        quotes: "Kalau ada masalah, masalah yang besar dikecilin, masalah yang kecil yaudah biarin aja"
+    },
+    {
+        name: "Azizi Asadel",
+        quotes: "Karena bersyukur itu hal yang harus kita punya dari diri kita, kalau kita tidak bersyukur, kita selalu akan merasa kurang dan gak cukup"
+    },
+    {
+        name: "Shania Gracia",
+        quotes: "Langit selalu menerima senja apapun warnanya hari ini. Ku harap ada orang seperti langit"
+    },
+    {
+        name: "Azizi Asadel",
+        quotes: "Pacar itu tidak penting, yang penting itu adalah perut, kalian harus tetap makan walaupun kalian tidak disuruh sama ayang"
+    },
+    {
+        name: "Azizi Asadel",
+        quotes: "Cinta adalah kekuatan misterius yang membuat dunia kita lebih indah atau malah sebaliknya"
+    },
+    {
+        name: "Fiony Alveria Tantri",
+        quotes: "Apapun masalah kamu pasti ada jalan keluarnya, tidak boleh menyerah, kamu lebih kuat daripada masalahmu percayalah!."
+    },
+    {
+        name: "Azizi Asadel",
+        quotes: "Woke Up Hell A Greatfull (Bangun dan Bersyukur)"
+    },
+    {
+        name: "Shania Gracia",
+        quotes: "Terkadang kita sebagai manusia terlalu khawatir akan suatu hal, padahal sebenarnya Tuhan sedang bekerja di balik semuanya"
+    },
+    {
+        name: "Ali Bin Abi Thalib",
+        quotes: "Aku sudah pernah merasakan semua kepahitan dalam hidup dan yang paling pahit ialah berharap kepada manusia"
+    },
+    {
+        name: "Yessica Tamara",
+        quotes: "Semua orang bermanfaat, dimata orang yang tepat"
+    },
+    {
+        name: "Marsha Lenathea",
+        quotes: "Hal terpenting dalam hidup bukan kemenangan, tetapi perjuangan. Belajar lebih tenang nikmati hidup dengan proses tanpa protes."
+    },
+    {
+        name: "Cornelia Vanesa",
+        quotes: "Aku bisa menghibur orang lain, tapi aku tidak bisa menghibur diriku sendiri"
+    },
+    {
+        name: "Angelina Christy",
+        quotes: "Jikalau misalkan ada yang susah kenapa harus yang gampang, hidup ini penuh tantangan, kalian harus berani mengambil jalan yang lebih susah"
+    },
+    {
+        name: "Marsha Lenathea",
+        quotes: "Jangan membuat hobi menjadi sesuatu yang membuat stress"
+    },
+    {
+        name: "Cak Nun",
+        quotes: "Pada akhirnya kamu akan hidup bersama karakternya dan akhlaknya. Bukan dengan ketampanan dan kecantikannya"
+    },
+    {
+        name: "Cornelia Vanisa",
+        quotes: "Jangan samakan langkah kita dengan langkah orang lain, langkah orang lain lebih cepat, tapi bisa jadi dia tidak merasakan, hal-hal indah yang kita rasakan di langkah kita yang lambat"
+    },
 ]
 
 module.exports = getQuotesData;

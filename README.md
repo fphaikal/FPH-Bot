@@ -9,14 +9,18 @@ A step by step guide that will tell you how to get the development environment u
 ```
 $ git clone https://github.com/fphaikal/FPH-Bot.git
 $ npm i
+$ npm start
 ```
 
 ## Feature
 The following are the features in FPH-Bot
 
 ```
-- Live Member JKT48
+- Info JKT48
+- Info SHOWROOM Live Member JKT48
 - Downloader Instagram & TikTok
 - Making Sticker
 - Search For Movies On IMDb
+- Search Music Lyric
+- Quotes 
 ```
